@@ -85,7 +85,7 @@ namespace PlayfairCipher
             return res;
         }
 
-        string Decryption(char x, char y, char[, ] a)
+        static string Decryption(char x, char y, char[, ] a)
         {
             string res = "";
             int i1 = -1, j1 = -1, i2 = -1, j2 = -1;
@@ -122,7 +122,7 @@ namespace PlayfairCipher
             }
             return res;
         }
-        string upperString(string s)
+        static string upperString(string s)
         {
             string res = "";
             for (int i = 0; i < s.Length; i++)
@@ -139,7 +139,7 @@ namespace PlayfairCipher
             return res;
         }
 
-        string standardText(string s)
+        static string standardText(string s)
         {
             string res = "";
             s = upperString(s);
@@ -161,7 +161,7 @@ namespace PlayfairCipher
             return res;
         }
 
-        List <string> SplitText(string text, string key, char[, ]a)
+        static List <string> SplitText(string text, string key, char[, ]a)
         {
             List <string> vt = new List<string>();
 
@@ -211,7 +211,6 @@ namespace PlayfairCipher
             dataGridView1.ColumnCount = 5;
             dataGridView1.RowCount = 5;
             
-
             PlayfairCipher(upperString(textBox2.Text), a);
             vt = SplitText(standardText(textBox1.Text), upperString(textBox2.Text), a);
 
@@ -225,5 +224,6 @@ namespace PlayfairCipher
             foreach (string x in vt)
                 textBox4.Text += Decryption(x[0], x[1], a) + " ";
         }
+
     }
 }
