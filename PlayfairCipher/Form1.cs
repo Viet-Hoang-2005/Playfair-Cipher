@@ -161,7 +161,7 @@ namespace PlayfairCipher
             return res;
         }
 
-        static List <string> SplitText(string text, string key, char[, ]a)
+        static List <string> SplitText(string text)
         {
             List <string> vt = new List<string>();
 
@@ -185,7 +185,7 @@ namespace PlayfairCipher
             dataGridView1.RowCount = 5;
 
             PlayfairCipher(upperString(textBox2.Text), a);
-            vt = SplitText(standardText(textBox1.Text), upperString(textBox2.Text), a);
+            vt = SplitText(standardText(textBox1.Text));
 
             for (int i = 0; i < 5; i++)
             {
@@ -212,7 +212,7 @@ namespace PlayfairCipher
             dataGridView1.RowCount = 5;
             
             PlayfairCipher(upperString(textBox2.Text), a);
-            vt = SplitText(standardText(textBox1.Text), upperString(textBox2.Text), a);
+            vt = SplitText(standardText(textBox1.Text));
 
             for (int i = 0; i < 5; i++)
             {
