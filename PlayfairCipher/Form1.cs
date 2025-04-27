@@ -25,26 +25,26 @@ namespace PlayfairCipher
 
         static void createMatrix(string key, char[,] a, int size)
         {
-            HashSet<char> mp = new HashSet<char>();
+            HashSet<char> hash = new HashSet<char>();
             int k = 0, h = 0;
 
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
                 {
-                    while (k < key.Length && mp.Contains(key[k]))
+                    while (k < key.Length && hash.Contains(key[k]))
                         k++;
 
                     if (k < key.Length)
                     {
                         a[i, j] = key[k];
-                        mp.Add(key[k]);
+                        hash.Add(key[k]);
                         k++;
                     }
                     else
                     {
                         char value;
-                        while (h < 26 && mp.Contains((char)(h + 'A')))
+                        while (h < 26 && hash.Contains((char)(h + 'A')))
                             h++;
                         if (h < 26)
                         {
@@ -54,13 +54,13 @@ namespace PlayfairCipher
                         else
                         {
                             h = 0;
-                            while (h < 10 && mp.Contains((char)(h + '0')))
+                            while (h < 10 && hash.Contains((char)(h + '0')))
                                 h++;
                             value = (char)(h + '0');
                             h++;
                         }
                         a[i, j] = value;
-                        mp.Add(value);
+                        hash.Add(value);
                     }
                 }
             }
@@ -68,7 +68,7 @@ namespace PlayfairCipher
 
         static string Encryption(char x, char y, char[, ] a, int k)
         {
-            string res = "";
+            string result = "";
             int i1 = -1, j1 = -1, i2 = -1, j2 = -1;
             for (int i = 0; i < k; i++)
             {
@@ -88,24 +88,24 @@ namespace PlayfairCipher
             }
             if (i1 == i2 && j1 != j2)
             {
-                res += a[i1, (j1 + 1) % k];
-                res += a[i2, (j2 + 1) % k];
+                result += a[i1, (j1 + 1) % k];
+                result += a[i2, (j2 + 1) % k];
             }
             else if (j1 == j2 && i1 != i2)
             {
-                res += a[(i1 + 1) % k, j1];
-                res += a[(i2 + 1) % k, j2];
+                result += a[(i1 + 1) % k, j1];
+                result += a[(i2 + 1) % k, j2];
             }
             else if (i1 != i2 && j1 != j2)
             {
-                res += a[i1, j2];
-                res += a[i2, j1];
+                result += a[i1, j2];
+                result += a[i2, j1];
             }
-            return res;
+            return result;
         }
         static string Decryption(char x, char y, char[, ] a, int k)
         {
-            string res = "";
+            string result = "";
             int i1 = -1, j1 = -1, i2 = -1, j2 = -1;
             for (int i = 0; i < k; i++)
             {
@@ -125,95 +125,95 @@ namespace PlayfairCipher
             }
             if (i1 == i2 && j1 != j2)
             {
-                res += a[i1, (j1 - 1 + k) % k];
-                res += a[i2, (j2 - 1 + k) % k];
+                result += a[i1, (j1 - 1 + k) % k];
+                result += a[i2, (j2 - 1 + k) % k];
             }
             else if (j1 == j2 && i1 != i2)
             {
-                res += a[(i1 - 1 + k) % k, j1];
-                res += a[(i2 - 1 + k) % k, j2];
+                result += a[(i1 - 1 + k) % k, j1];
+                result += a[(i2 - 1 + k) % k, j2];
             }
             else if (i1 != i2 && j1 != j2)
             {
-                res += a[i1, j2];
-                res += a[i2, j1];
+                result += a[i1, j2];
+                result += a[i2, j1];
             }
-            return res;
+            return result;
         }
         static string stringFilter(string s, bool b)
         {
-            string res = "";
+            string result = "";
             for (int i = 0; i < s.Length; i++)
             {
                 if (!b)
                 {
                     if (char.IsLetter(s[i]) || char.IsDigit(s[i]))
-                        res += s[i];
+                        result += s[i];
                 }
                 else
                 {
                     if (char.IsLetter(s[i]))
                     {
                         if (s[i] == 'j' || s[i] == 'J')
-                            res += 'i';
+                            result += 'i';
                         else
-                            res += s[i];
+                            result += s[i];
                     }
                 }
             }
 
-            string nor = res.Normalize(NormalizationForm.FormD);
+            string normalForm = result.Normalize(NormalizationForm.FormD);
             StringBuilder sb = new StringBuilder();
 
-            foreach (char c in nor)
+            foreach (char c in normalForm)
             {
-                UnicodeCategory unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
-                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+                UnicodeCategory unicodeCat = CharUnicodeInfo.GetUnicodeCategory(c);
+                if (unicodeCat != UnicodeCategory.NonSpacingMark)
                     sb.Append(c);
                 
             }
-            res = sb.ToString().ToUpper();
-            res = res.Replace('Đ', 'D');
-            return res;
+            result = sb.ToString().ToUpper();
+            result = result.Replace('Đ', 'D');
+            return result;
         }
 
         static string standardText(string s, bool b)
         {
-            string res = "";
+            string result = "";
             s = stringFilter(s, b);
 
             for (int i = 0; i < s.Length; i += 2)
             {
-                res += s[i];
+                result+= s[i];
                 if (i == s.Length - 1) break;
                 if (s[i] == s[i + 1])
                 {
-                    res += 'X';
+                    result += 'X';
                     i--;
                 }
                 else
-                    res += s[i + 1];
+                    result += s[i + 1];
             }
 
-            if (res.Length % 2 != 0)
-                res += 'X';
-            return res;
+            if (result.Length % 2 != 0)
+                result += 'X';
+            return result;
         }
 
         static List <string> SplitText(string text)
         {
-            List <string> vt = new List<string>();
+            List <string> listStr = new List<string>();
 
             for (int i = 0; i < text.Length - 1; i += 2)
-                vt.Add(text[i].ToString() + text[i + 1].ToString());
+                listStr.Add(text[i].ToString() + text[i + 1].ToString());
 
-            return vt;
+            return listStr;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             char[,] a = new char[6, 6];
-            List<string> vt = new List<string>();
+            List<string> listStr = new List<string>();
 
             textBox3.Clear();
             textBox4.Clear();
@@ -221,21 +221,21 @@ namespace PlayfairCipher
             if (radioButton1.Checked)
             {
                 createMatrix(stringFilter(textBox2.Text, true), a, 5);
-                vt = SplitText(standardText(textBox1.Text, true));
+                listStr = SplitText(standardText(textBox1.Text, true));
 
-                foreach (string x in vt)
+                foreach (string x in listStr)
                     textBox3.Text += x + " ";
-                foreach (string x in vt)
+                foreach (string x in listStr)
                     textBox4.Text += Encryption(x[0], x[1], a, 5) + " ";
             }
             else
             {
                 createMatrix(stringFilter(textBox2.Text, false), a, 6);
-                vt = SplitText(standardText(textBox1.Text, false));
+                listStr = SplitText(standardText(textBox1.Text, false));
 
-                foreach (string x in vt)
+                foreach (string x in listStr)
                     textBox3.Text += x + " ";
-                foreach (string x in vt)
+                foreach (string x in listStr)
                     textBox4.Text += Encryption(x[0], x[1], a, 6) + " ";
             }
             for (int i = 0; i < 6; i++)
@@ -248,7 +248,7 @@ namespace PlayfairCipher
         private void button2_Click(object sender, EventArgs e)
         {
             char[,] a = new char[6, 6];
-            List<string> vt = new List<string>();
+            List<string> listStr = new List<string>();
 
             textBox3.Clear();
             textBox4.Clear();
@@ -256,21 +256,21 @@ namespace PlayfairCipher
             if (radioButton1.Checked)
             {
                 createMatrix(stringFilter(textBox2.Text, true), a, 5);
-                vt = SplitText(standardText(textBox1.Text, true));
+                listStr = SplitText(standardText(textBox1.Text, true));
 
-                foreach (string x in vt)
+                foreach (string x in listStr)
                     textBox3.Text += x + " ";
-                foreach (string x in vt)
+                foreach (string x in listStr)
                     textBox4.Text += Decryption(x[0], x[1], a, 5) + " ";
             }
             else
             {
                 createMatrix(stringFilter(textBox2.Text, false), a, 6);
-                vt = SplitText(standardText(textBox1.Text, false));
+                listStr = SplitText(standardText(textBox1.Text, false));
 
-                foreach (string x in vt)
+                foreach (string x in listStr)
                     textBox3.Text += x + " ";
-                foreach (string x in vt)
+                foreach (string x in listStr)
                     textBox4.Text += Decryption(x[0], x[1], a, 6) + " ";
             }
             for (int i = 0; i < 6; i++)
@@ -345,6 +345,19 @@ namespace PlayfairCipher
                     {
                         writer.Write(textBox4.Text);
                     }
+                    
+                    string directoryPath = Path.GetDirectoryName(sfd.FileName);
+                    string baseName = "Key.txt";
+                    string outputPath = Path.Combine(directoryPath, baseName);
+                    int cnt = 1;
+                    
+                    while (File.Exists(outputPath))
+                    {
+                        string newName = $"Key({cnt}).txt";
+                        outputPath = Path.Combine(directoryPath, newName);
+                        cnt++;
+                    }
+                    File.WriteAllText(outputPath, textBox2.Text);
                 }
                 catch (Exception ex)
                 {
