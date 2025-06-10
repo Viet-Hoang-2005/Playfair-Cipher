@@ -2,9 +2,11 @@ C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\bin\Debug\Playfair
 C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\bin\Debug\PlayfairCipher.exe
 C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\bin\Debug\PlayfairCipher.pdb
 C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\obj\Debug\PlayfairCipher.csproj.AssemblyReference.cache
-C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\obj\Debug\PlayfairCipher.Form1.resources
 C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\obj\Debug\PlayfairCipher.Properties.Resources.resources
 C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\obj\Debug\PlayfairCipher.csproj.GenerateResource.cache
 C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\obj\Debug\PlayfairCipher.csproj.CoreCompileInputs.cache
 C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\obj\Debug\PlayfairCipher.exe
 C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\obj\Debug\PlayfairCipher.pdb
+C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\bin\Debug\Guna.UI2.dll
+C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\obj\Debug\PlayfairCipher.Playfair.resources
+C:\Users\Tnvho\OneDrive\Project\PlayfairCipher\PlayfairCipher\obj\Debug\Playfair.4122D4DE.Up2Date
