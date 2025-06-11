@@ -308,8 +308,11 @@ namespace PlayfairCipher
 
                 tbSplit.Clear();
                 tbResult.Clear();
+
                 dgvKeyMatrix.Rows.Clear();
                 dgvKeyMatrix.Columns.Clear();
+                dgvKeyMatrix.ColumnCount = 6;
+                dgvKeyMatrix.RowCount = 6;
 
                 createMatrix(stringFilter(tbKey.Text, rbtn5x5.Checked), a, size);
                 listStr = SplitText(standardText(tbText.Text, rbtn5x5.Checked));
@@ -340,8 +343,11 @@ namespace PlayfairCipher
 
                 tbSplit.Clear();
                 tbResult.Clear();
+
                 dgvKeyMatrix.Rows.Clear();
                 dgvKeyMatrix.Columns.Clear();
+                dgvKeyMatrix.ColumnCount = 6;
+                dgvKeyMatrix.RowCount = 6;
 
                 createMatrix(stringFilter(tbKey.Text, rbtn5x5.Checked), a, size);
                 listStr = SplitText(standardText(tbText.Text, rbtn5x5.Checked));
