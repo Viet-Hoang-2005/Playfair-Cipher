@@ -54,10 +54,10 @@ namespace PlayfairCipher
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(497, 21);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(479, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 31);
+            this.label1.Size = new System.Drawing.Size(189, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Playfair Cipher";
             // 
@@ -161,7 +161,7 @@ namespace PlayfairCipher
             this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.FillColor = System.Drawing.Color.White;
+            this.btnDelete.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.HoverState.FillColor = System.Drawing.Color.LightCoral;
@@ -182,7 +182,7 @@ namespace PlayfairCipher
             this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.White;
+            this.btnSave.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.HoverState.FillColor = System.Drawing.Color.LightBlue;
@@ -227,7 +227,7 @@ namespace PlayfairCipher
             this.btnEncrypt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnEncrypt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnEncrypt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEncrypt.FillColor = System.Drawing.Color.White;
+            this.btnEncrypt.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnEncrypt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnEncrypt.ForeColor = System.Drawing.Color.Black;
             this.btnEncrypt.HoverState.FillColor = System.Drawing.Color.LightBlue;
@@ -248,7 +248,7 @@ namespace PlayfairCipher
             this.btnDecrypt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDecrypt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDecrypt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDecrypt.FillColor = System.Drawing.Color.White;
+            this.btnDecrypt.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnDecrypt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDecrypt.ForeColor = System.Drawing.Color.Black;
             this.btnDecrypt.HoverState.FillColor = System.Drawing.Color.LightBlue;
@@ -314,7 +314,7 @@ namespace PlayfairCipher
             this.btnOpenFileText.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnOpenFileText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnOpenFileText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOpenFileText.FillColor = System.Drawing.Color.White;
+            this.btnOpenFileText.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnOpenFileText.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOpenFileText.ForeColor = System.Drawing.Color.Black;
             this.btnOpenFileText.HoverState.FillColor = System.Drawing.Color.LightBlue;
@@ -335,7 +335,7 @@ namespace PlayfairCipher
             this.btnOpenFileKey.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnOpenFileKey.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnOpenFileKey.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOpenFileKey.FillColor = System.Drawing.Color.White;
+            this.btnOpenFileKey.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnOpenFileKey.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOpenFileKey.ForeColor = System.Drawing.Color.Black;
             this.btnOpenFileKey.HoverState.FillColor = System.Drawing.Color.LightBlue;
